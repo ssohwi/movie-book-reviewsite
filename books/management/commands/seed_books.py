@@ -1,5 +1,7 @@
 from random import choice, randint
 from django.core.management.base import BaseCommand
+
+# $ pipenv install django-seed 필요
 from django_seed import Seed
 from books.models import Book
 from categories.models import Category

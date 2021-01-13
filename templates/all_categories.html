@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block page_name %}
+    category
+{% endblock page_name %}
+    
+{% block content %}
+
+    {% for category in categories %}
+    
+    {{category.kind}}/
+    {{category.name}}
+    <br>
+
+    {% endfor %}
+
+{% endblock content %}
+    

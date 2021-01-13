@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from . import models
 
-# Create your views here.
+
+def all_people(request):
+    people = models.Person.objects.all()
+    return render(request, "all_people.html", context={"people": people})

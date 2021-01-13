@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block page_name %}
+    home
+{% endblock page_name %}
+    
+{% block content %}
+<h1>Book</h1>
+{% for book in books %}
+    {{book.title}}
+    {{book.cover_image}}
+    <br>
+{% endfor %}
+<h1>Movie</h1>
+{% for movie in movies %}
+    {{movie.title}}
+    {{movie.cover_image}}
+    <br>
+{% endfor %}
+<h1>People</h1>
+{% for person in people %}
+    {{person.name}}
+    {{person.photo}}
+    <br>
+{% endfor %}
+    
+
+{% endblock content %}

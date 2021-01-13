@@ -11,6 +11,7 @@ autopep8 = "*"
 django = "==2.2.5"
 pillow = "*"
 django-seed = "*"
+django-choices = "*"
 
 [requires]
 python_version = "3.8"
