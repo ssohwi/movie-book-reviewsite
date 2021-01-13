@@ -3,5 +3,5 @@
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true,
     "python.formatting.provider": "black",
-    "python.pythonPath": "C:\\Users\\hwi44\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe"
+    "python.pythonPath": "C:\\Users\\hwi44\\.virtualenvs\\movie-book-reviewsite-CrweWExv\\Scripts\\python.exe"
 }
