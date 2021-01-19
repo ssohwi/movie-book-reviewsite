@@ -1,29 +1,40 @@
-{% extends 'base.html' %}
+{% extends "base.html" %} {% block content %}
+<div>
+  <div>
+	<h2>Movies <a href="{% url 'movies:create' %}">[create]</a></h2>
+	{% for movie in movies %}
+	<div>
+		<h3><a href="{% url 'movies:movie' movie.pk %}">{{movie.title}}</a></h3>
+		<h5>{{movie.year}}</h5>
+	</div>
+	{% endfor %}
+	<a href="{% url 'movies:movies' %}">See all movies &rarr;</a>
+	<hr />
+</div>
 
 
-{% block page_name %}
-    home
-{% endblock page_name %}
-    
-{% block content %}
-<h1>Book</h1>
-{% for book in books %}
-    {{book.title}}
-    {{book.cover_image}}
-    <br>
-{% endfor %}
-<h1>Movie</h1>
-{% for movie in movies %}
-    {{movie.title}}
-    {{movie.cover_image}}
-    <br>
-{% endfor %}
-<h1>People</h1>
-{% for person in people %}
-    {{person.name}}
-    {{person.photo}}
-    <br>
-{% endfor %}
-    
 
-{% endblock content %}
+<div>
+	<h2>Books <a href="{% url 'books:create' %}">[create]</a></h2>
+	{% for book in books %}
+	<div>
+		<h3><a href="{% url 'books:book' book.pk %}">{{book.title}}</a></h3>
+		<h5>{{book.year}}</h5>
+	</div>
+	{% endfor %}
+	<a href="{% url 'books:books' %}">See all books &rarr;</a>
+	<hr />
+</div>
+
+<div>
+	<h2>People <a href="{% url 'people:create' %}">[create]</a></h2>
+	{% for person in people %}
+	<div>
+		<h3><a href="{% url 'people:person' person.pk %}">{{person.name}}</a></h3>
+		<h5>{{person.kind}}</h5>
+	</div>
+	{% endfor %}
+	<a href="{% url 'people:people' %}">See all people &rarr;</a>
+	<hr />
+	<div>
+		{% endblock content %}

@@ -19,3 +19,9 @@ class Book(CoreModel):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("books:book", kwargs={"pk": self.pk})
+
+    class Meta:
+        ordering = ["-created_at"]

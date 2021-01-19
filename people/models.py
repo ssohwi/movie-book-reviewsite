@@ -22,3 +22,10 @@ class Person(CoreModel):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse("people:person", kwargs={"pk": self.pk})
+
+    class Meta:
+        verbose_name_plural = "People"
+        ordering = ["created_at"]

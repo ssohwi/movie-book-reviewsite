@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{person.name}}</h2>
+
+<a href="{% url 'people:update' person.pk %}">Edit Person</a>
+
+{% endblock content %}
