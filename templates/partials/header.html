@@ -6,6 +6,12 @@
         <li><a href="/">Movies</a></li>
         <li><a href="/">People</a></li>
         <li><a href="/">Search</a></li>
-        <li><a href="/">Login</a></li>
-    </ul>
+    {% if user.is_authenticated %}
+        <li><a href="{% url "users:logout" %}">Log out</a></li>
+    {% else %}
+        <li><a href="{% url "users:login" %}">Log in</a></li>
+        <li><a href="{% url "users:signup" %}">Sign up</a></li>
+    {% endif %}
+
+</ul>
 </header>
